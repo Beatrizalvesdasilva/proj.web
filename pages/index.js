@@ -25,6 +25,30 @@
           </div>
         </div>
         {/* Header with image */}
+        <title>W3.CSS Template</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+        <style dangerouslySetInnerHTML={{__html: "\nbody, html {\n  height: 100%;\n  font-family: \"Inconsolata\", sans-serif;\n}\n\n.bgimg {\n  background-position: center;\n  background-size: cover;\n  background-image: url(\"/w3images/coffeehouse.jpg\");\n  min-height: 75%;\n}\n\n.menu {\n  display: none;\n}\n" }} />
+        {/* Links (sit on top) */}
+        <div className="w3-top">
+          <div className="w3-row w3-padding w3-black">
+            <div className="w3-col s3">
+              <a href="#" className="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#about" className="w3-button w3-block w3-black">ABOUT</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#menu" className="w3-button w3-block w3-black">MENU</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#where" className="w3-button w3-block w3-black">WHERE</a>
+            </div>
+          </div>
+        </div>
+        {/* Header with image */}
         <header className="bgimg w3-display-container w3-grayscale-min" id="home">
           <div className="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
             <span className="w3-tag">Open from 6am to 5pm</span>
