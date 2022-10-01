@@ -5,81 +5,117 @@
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <style dangerouslySetInnerHTML={{__html: "\nbody {font-family: \"Times New Roman\", Georgia, Serif;}\nh1, h2, h3, h4, h5, h6 {\n  font-family: \"Playfair Display\";\n  letter-spacing: 5px;\n}\n" }} />
-        {/* Navbar (sit on top) */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+        <style dangerouslySetInnerHTML={{__html: "\nbody, html {\n  height: 100%;\n  font-family: \"Inconsolata\", sans-serif;\n}\n\n.bgimg {\n  background-position: center;\n  background-size: cover;\n  background-image: url(\"/w3images/coffeehouse.jpg\");\n  min-height: 75%;\n}\n\n.menu {\n  display: none;\n}\n" }} />
+        {/* Links (sit on top) */}
         <div className="w3-top">
-          <div className="w3-bar w3-white w3-padding w3-card" style={{letterSpacing: '4px'}}>
-            <a href="#home" className="w3-bar-item w3-button">Gourmet au Catering</a>
-            {/* Right-sided navbar links. Hide them on small screens */}
-            <div className="w3-right w3-hide-small">
-              <a href="#about" className="w3-bar-item w3-button">About</a>
-              <a href="#menu" className="w3-bar-item w3-button">Menu</a>
-              <a href="#contact" className="w3-bar-item w3-button">Contact</a>
+          <div className="w3-row w3-padding w3-black">
+            <div className="w3-col s3">
+              <a href="#" className="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#about" className="w3-button w3-block w3-black">ABOUT</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#menu" className="w3-button w3-block w3-black">MENU</a>
+            </div>
+            <div className="w3-col s3">
+              <a href="#where" className="w3-button w3-block w3-black">WHERE</a>
             </div>
           </div>
         </div>
-        {/* Header */}
-        <header className="w3-display-container w3-content w3-wide" style={{maxWidth: '1600px', minWidth: '500px'}} id="home">
-          <img className="w3-image" src="/hamburger.jpg" alt="Hamburger Catering" width={1600} height={800} />
-          <div className="w3-display-bottomleft w3-padding-large w3-opacity">
-            <h1 className="w3-xxlarge">Le Catering</h1>
+        {/* Header with image */}
+        <header className="bgimg w3-display-container w3-grayscale-min" id="home">
+          <div className="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+            <span className="w3-tag">Open from 6am to 5pm</span>
+          </div>
+          <div className="w3-display-middle w3-center">
+            <span className="w3-text-white" style={{fontSize: '90px'}}>the<br />Cafe</span>
+          </div>
+          <div className="w3-display-bottomright w3-center w3-padding-large">
+            <span className="w3-text-white">15 Adr street, 5015</span>
           </div>
         </header>
-        {/* Page content */}
-        <div className="w3-content" style={{maxWidth: '1100px'}}>
-          {/* About Section */}
-          <div className="w3-row w3-padding-64" id="about">
-            <div className="w3-col m6 w3-padding-large w3-hide-small">
-              <img src="/w3images/tablesetting2.jpg" className="w3-round w3-image w3-opacity-min" alt="Table Setting" width={600} height={750} />
-            </div>
-            <div className="w3-col m6 w3-padding-large">
-              <h1 className="w3-center">About Catering</h1><br />
-              <h5 className="w3-center">Tradition since 1889</h5>
-              <p className="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span className="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-              <p className="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <hr />
-          {/* Menu Section */}
-          <div className="w3-row w3-padding-64" id="menu">
-            <div className="w3-col l6 w3-padding-large">
-              <h1 className="w3-center">Our Menu</h1><br />
-              <h4>Bread Basket</h4>
-              <p className="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br />
-              <h4>Honey Almond Granola with Fruits</h4>
-              <p className="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br />
-              <h4>Belgian Waffle</h4>
-              <p className="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br />
-              <h4>Scrambled eggs</h4>
-              <p className="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br />
-              <h4>Blueberry Pancakes</h4>
-              <p className="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
-            </div>
-            <div className="w3-col l6 w3-padding-large">
-              <img src="/w3images/tablesetting.jpg" className="w3-round w3-image w3-opacity-min" alt="Menu" style={{width: '100%'}} />
+        {/* Add a background color and large text to the whole page */}
+        <div className="w3-sand w3-grayscale w3-large">
+          {/* About Container */}
+          <div className="w3-container" id="about">
+            <div className="w3-content" style={{maxWidth: '700px'}}>
+              <h5 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+              <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+              <div className="w3-panel w3-leftbar w3-light-grey">
+                <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+                <p>Chef, Coffeeist and Owner: Liam Brown</p>
+              </div>
+              <img src="/coffeeshop.jpg" style={{width: '100%', maxWidth: '1000px'}} className="w3-margin-top" />
+              <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+              <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
             </div>
           </div>
-          <hr />
-          {/* Contact Section */}
-          <div className="w3-container w3-padding-64" id="contact">
-            <h1>Contact</h1><br />
-            <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-            <p className="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-            <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-            <form action="/action_page.php" target="_blank">
-              <p><input className="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name" /></p>
-              <p><input className="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People" /></p>
-              <p><input className="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" defaultValue="2020-11-16T20:00" /></p>
-              <p><input className="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message" /></p>
-              <p><button className="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-            </form>
+          {/* Menu Container */}
+          <div className="w3-container" id="menu">
+            <div className="w3-content" style={{maxWidth: '700px'}}>
+              <h5 className="w3-center w3-padding-48"><span className="w3-tag w3-wide">THE MENU</span></h5>
+              <div className="w3-row w3-center w3-card w3-padding">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                  <div className="w3-col s6 tablink">Eat</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                  <div className="w3-col s6 tablink">Drink</div>
+                </a>
+              </div>
+              <div id="Eat" className="w3-container menu w3-padding-48 w3-card">
+                <h5>Bread Basket</h5>
+                <p className="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br />
+                <h5>Honey Almond Granola with Fruits</h5>
+                <p className="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br />
+                <h5>Belgian Waffle</h5>
+                <p className="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br />
+                <h5>Scrambled eggs</h5>
+                <p className="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br />
+                <h5>Blueberry Pancakes</h5>
+                <p className="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+              </div>
+              <div id="Drinks" className="w3-container menu w3-padding-48 w3-card">
+                <h5>Coffee</h5>
+                <p className="w3-text-grey">Regular coffee 2.50</p><br />
+                <h5>Chocolato</h5>
+                <p className="w3-text-grey">Chocolate espresso with milk 4.50</p><br />
+                <h5>Corretto</h5>
+                <p className="w3-text-grey">Whiskey and coffee 5.00</p><br />
+                <h5>Iced tea</h5>
+                <p className="w3-text-grey">Hot tea, except not hot 3.00</p><br />
+                <h5>Soda</h5>
+                <p className="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+              </div>  
+              <img src="/w3images/coffeehouse2.jpg" style={{width: '100%', maxWidth: '1000px', marginTop: '32px'}} />
+            </div>
+          </div>
+          {/* Contact/Area Container */}
+          <div className="w3-container" id="where" style={{paddingBottom: '32px'}}>
+            <div className="w3-content" style={{maxWidth: '700px'}}>
+              <h5 className="w3-center w3-padding-48"><span className="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+              <p>Find us at some address at some place.</p>
+              <img src="/w3images/map.jpg" className="w3-image" style={{width: '100%'}} />
+              <p><span className="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+              <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+              <form action="/action_page.php" target="_blank">
+                <p><input className="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name" /></p>
+                <p><input className="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People" /></p>
+                <p><input className="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" defaultValue="2020-11-16T20:00" /></p>
+                <p><input className="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message" /></p>
+                <p><button className="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+              </form>
+            </div>
           </div>
           {/* End page content */}
         </div>
         {/* Footer */}
-        <footer className="w3-center w3-light-grey w3-padding-32">
+        <footer className="w3-center w3-light-grey w3-padding-48 w3-large">
           <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" className="w3-hover-text-green">w3.css</a></p>
         </footer>
       </div>
+
 	);
  }
